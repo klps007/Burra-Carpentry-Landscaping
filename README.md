@@ -1,6 +1,12 @@
 # Burra-Carpentry-Landscaping
 
----
+## CMP1043-4.2 Dataflow Diagram
+
+![Dataflow Diagram](./images/dataflow.png)
+
+## CMP1043-4.3 Application Architecture Diagram
+
+![Architectuire Diagram](./images/architecture.png)
 
 ## CMP1043-5.1 User Stories and Personas
 
@@ -92,6 +98,14 @@ Below you can see the basic wireframes with comments.
 ---
 
 ## CMP1043-5.2 Trello
+
+Trello was used to allocate and track tasks, it includes sections for to do, doing and done and organizes tasks under each.
+
+The task is assigned to them team member and the trello card moves from "To Do" to "Doing" and then "Done" column on completion.
+
+This system made it easy for everyone to know what the everyone else was working on reducing conflict with pulling and pushing to github.
+
+This results in agile methodology being implemented through out our project.
 
 ![Trello ](./images/Trello1.png)
 ![Trello ](./images/Trello2.png)

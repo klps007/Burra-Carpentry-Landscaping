@@ -2,11 +2,11 @@
 
 ## CMP1043-4.2 Dataflow Diagram
 
-![Dataflow Diagram](./images/dataflow.png)
+![Dataflow Diagram](./images/Dataflow.jpeg)
 
 ## CMP1043-4.3 Application Architecture Diagram
 
-![Architectuire Diagram](./images/architecture.png)
+![Architectuire Diagram](./images/Architecture.jpeg)
 
 ## CMP1043-5.1 User Stories and Personas
 

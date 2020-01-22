@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-class MyForm extends React.Component {
+class MyTestForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = { username: "", age: "" };
@@ -19,7 +19,7 @@ class MyForm extends React.Component {
           <h1>
             Hello {this.state.username} {this.state.age}
           </h1>
-          <p>Enter your name:</p>
+          <p>Enter your name here:</p>
           <input type="text" onChange={this.myChangeHandlerUserName} />
 
           <p>Enter your age:</p>
@@ -30,4 +30,4 @@ class MyForm extends React.Component {
   }
 }
 
-export default MyForm;
+export default MyTestForm;

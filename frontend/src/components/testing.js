@@ -19,7 +19,7 @@ class MyTestForm extends React.Component {
           <h1>
             Hello {this.state.username} {this.state.age}
           </h1>
-          <p>Enter your name:</p>
+          <p>Enter your name here:</p>
           <input type="text" onChange={this.myChangeHandlerUserName} />
 
           <p>Enter your age:</p>

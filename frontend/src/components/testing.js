@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-class MyForm extends React.Component {
+class MyTestForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = { username: "", age: "" };
@@ -30,4 +30,4 @@ class MyForm extends React.Component {
   }
 }
 
-export default MyForm;
+export default MyTestForm;

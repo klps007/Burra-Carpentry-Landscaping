@@ -5,10 +5,33 @@ import Multiselect from "react-widgets/lib/Multiselect";
 import "react-widgets/dist/css/react-widgets.css";
 
 class GetQuoteForm extends React.Component {
-  // handleFormSubmit = data => {
-  //   data.preventDefault();
-  //   console.log();
-  // };
+  renderMultiSelect = ({ input, name }) => {
+    return (
+      <div>
+        <Multiselect
+          {...input}
+          name={name}
+          data={[
+            "Paving",
+            "Patio",
+            "Retaining Wall",
+            "Fencing",
+            "Decking",
+            "Pool Area",
+            "Water Feature",
+            "New Lawn",
+            "New Plants",
+            "Tree Removal",
+            "Rubbish Removal",
+            "In Home Carpentry",
+            "Walk in Robe"
+          ]}
+          onBlur={this.props.onBlur}
+          value={input.value !== "[]" ? [...input.value] : "[]"}
+        />
+      </div>
+    );
+  };
   render() {
     return (
       <form onSubmit={this.props.handleSubmit}>
@@ -48,7 +71,6 @@ class GetQuoteForm extends React.Component {
         <div>
           <label>Is this a Commercial or Residential Property?</label>
           <Field name="commercialOrResidential" component="select">
-            <option></option>
             <option value="Residential">Residential</option>
             <option value="Commercial">Commercial</option>
           </Field>
@@ -59,7 +81,6 @@ class GetQuoteForm extends React.Component {
             Are you currently in the planing phase, or ready to get started?
           </label>
           <Field name="planningOnlyOrReadyNow" component="select">
-            <option></option>
             <option value="Planning">Currently just planning</option>
             <option value="ReadyToGetStarted">Ready to get started</option>
           </Field>
@@ -91,7 +112,8 @@ class GetQuoteForm extends React.Component {
 
         <div>
           <label>Required Services</label>
-          <Field
+          <Field name="serviceRequired" component={this.renderMultiSelect} />
+          {/* <Field
             name="serviceRequired"
             component={Multiselect}
             defaultValue={[]}
@@ -111,7 +133,7 @@ class GetQuoteForm extends React.Component {
               "In Home Carpentry",
               "Walk in Robe"
             ]}
-          />
+          /> */}
         </div>
 
         <div>
@@ -125,21 +147,12 @@ class GetQuoteForm extends React.Component {
   }
 }
 
-GetQuoteForm = reduxForm({ form: "getquoteform" })(GetQuoteForm);
+GetQuoteForm = reduxForm({
+  form: "getquoteform",
+  initialValues: {
+    commercialOrResidential: "residential",
+    planningOnlyOrReadyNow: "Planning",
+    needFinance: false
+  }
+})(GetQuoteForm);
 export default GetQuoteForm;
-
-// serviceRequired: {
-//   paving: Boolean,
-//   patio: Boolean,
-//   retainingWall: Boolean,
-//   fencing: Boolean,
-//   decking: Boolean,
-//   poolArea: Boolean,
-//   waterFeature: Boolean,
-//   newLawn: Boolean,
-//   newPlants: Boolean,
-//   treeRemoval: Boolean,
-//   rubbishRemoval: Boolean,
-//   inHomeCarpentry: Boolean,
-//   walkInRobe: Boolean,
-//   additionalDetails: String

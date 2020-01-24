@@ -6,7 +6,7 @@ export class Navbar extends Component {
   render() {
     return (
       <div>
-        <div class="navbar-links">
+        <div className="navbar-links">
           <Link to="/">Burra Carpentry Landscaping</Link>
           <Link to="/gallery">Gallery</Link>
           <Link to="/reviews">Reviews</Link>

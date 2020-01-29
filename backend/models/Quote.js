@@ -38,22 +38,24 @@ let quoteSchema = new mongoose.Schema(
       needFinance: Boolean,
       approxsizeSQM: Number
     },
-    serviceRequired: {
-      paving: String,
-      patio: String,
-      retainingWall: String,
-      fencing: String,
-      decking: String,
-      poolArea: String,
-      waterFeature: String,
-      newLawn: String,
-      newPlants: String,
-      treeRemoval: String,
-      rubbishRemoval: String,
-      inHomeCarpentry: String,
-      walkInRobe: String,
-      additionalDetails: String
-    }
+    serviceRequired: [
+      {
+        paving: String,
+        patio: String,
+        retainingWall: String,
+        fencing: String,
+        decking: String,
+        poolArea: String,
+        waterFeature: String,
+        newLawn: String,
+        newPlants: String,
+        treeRemoval: String,
+        rubbishRemoval: String,
+        inHomeCarpentry: String,
+        walkInRobe: String,
+        additionalDetails: String
+      }
+    ]
   },
   { collection: 'quotes' }
 );

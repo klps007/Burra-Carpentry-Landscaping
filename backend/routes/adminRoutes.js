@@ -48,12 +48,12 @@ router.delete('/review/:id', deleteReview);
 
 const {
   indexGallery,
-  remove,
+  //remove,
   uploadImage
 } = require('../controllers/gallery-controller');
 
 router.get('/gallery', indexGallery);
 //router.delete('/gallery/:id', remove);
-router.post('/gallery/:id', upload.single('file'), uploadImage);
+router.post('/upload', upload.single('file'), uploadImage);
 
 module.exports = router;

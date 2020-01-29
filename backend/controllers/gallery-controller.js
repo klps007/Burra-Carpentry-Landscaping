@@ -1,37 +1,65 @@
-// var express = require('express'), // "^4.13.4"
-//   aws = require('aws-sdk'), // ^2.2.41
-//   bodyParser = require('body-parser'),
-//   multer = require('multer'), // "multer": "^1.1.0"
-//   multerS3 = require('multer-s3'); //"^1.4.1"
+require('dotenv/config');
 
-// aws.config.update({
-//   secretAccessKey: 'W/u0ABGCotJJy1Zf8I3lWtI36fiRACsqutqTq28s',
-//   accessKeyId: 'AKIAJ7ITMZS227TKVKYQ',
-//   region: 'ap-southeast-2'
-// });
+const Image = require('../models/Gallery');
 
-// var app = express(),
-//   s3 = new aws.S3();
+const cloudinary = require('cloudinary');
 
-// app.use(bodyParser.json());
+exports.indexGallery = async (req, res) => {
+  try {
+    const images = await Image.find().sort({ _id: -1 });
+    res.status(200).json(images);
+  } catch (error) {
+    console.log(error.stack);
+    res.status(500).send(error.message);
+  }
+};
 
-// var upload = multer({
-//   storage: multerS3({
-//     s3: s3,
-//     bucket: 'burracl',
-//     key: function(req, file, cb) {
-//       console.log(file);
-//       cb(null, file.originalname); //use Date.now() for unique file keys
-//     }
-//   })
-// });
+exports.uploadImage = async (req, res) => {
+  cloudinary.v2.uploader.upload(req.file.path, function(err, result) {
+    if (err) {
+      req.json(err.message);
+    }
+    req.body.image = result.secure_url;
+    // add image's public_id to image object
+    req.body.imageId = result.public_id;
 
-// //open in browser to see upload form
-// app.get('/', function(req, res) {
-//   res.sendFile(__dirname + '/index.html');
-// });
+    Image.create(req.body, function(err, image) {
+      if (err) {
+        res.json(err.message);
+        return res.redirect('/');
+      }
+    });
+  });
+};
 
-// //used by upload form
-// router.post('/upload', upload.array('upl', 1), function(req, res, next) {
-//   res.send('Uploaded!');
-// });
+// // // Router to delete a DOCUMENT file
+// router.route("/:id").delete((req, res, next) => {
+//     DOCUMENT.findByIdAndRemove(req.params.id, (err, result) => {
+//       if (err) {
+//         return next(err);
+//       }
+//       //Now Delete the file from AWS-S3
+//       // https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#deleteObject-property
+//       let s3bucket = new AWS.S3({
+//         accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+//         secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+//         region: process.env.AWS_REGION
+//       });
+
+//       let params = {
+//         Bucket: process.env.AWS_BUCKET_NAME,
+//         Key: result.s3_key
+//       };
+
+//       s3bucket.deleteObject(params, (err, data) => {
+//         if (err) {
+//           console.log(err);
+//         } else {
+//           res.send({
+//             status: "200",
+//             responseType: "string",
+//             response: "success"
+//           });
+//         }
+//       });
+//     });

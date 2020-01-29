@@ -1,5 +1,9 @@
 var express = require('express');
 var router = express.Router();
+const multer = require('multer');
+
+const storage = multer.memoryStorage();
+const upload = multer({ storage });
 
 const { checkAdmin } = require('../middleware/jwt');
 
@@ -31,16 +35,6 @@ router.get('/quote/:id', viewQuote);
 router.put('/quote/:id', updateQuote);
 router.delete('quote/:id', deleteQuote);
 
-// const {
-//   //uploadImage,
-//   deleteImage
-// } = require('../controllers/gallery-controller');
-
-// //  CRUD Gallery
-// router.get('/');
-// //router.post('/:id/image', upload.single('file'), uploadImage);
-// router.delete('/:id', deleteImage);
-
 // CRUD for Reviews
 const {
   indexPage,
@@ -51,5 +45,15 @@ const {
 router.get('/reviews', indexPage);
 router.get('/review/:id', viewReview);
 router.delete('/review/:id', deleteReview);
+
+const {
+  indexGallery,
+  remove,
+  uploadImage
+} = require('../controllers/gallery-controller');
+
+router.get('/gallery', indexGallery);
+//router.delete('/gallery/:id', remove);
+router.post('/gallery/:id', upload.single('file'), uploadImage);
 
 module.exports = router;

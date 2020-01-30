@@ -8,7 +8,6 @@ const {
 
 exports.login = async (req, res) => {
   let { username, password } = req.body;
-  //email = email.toLowerCase();
   if (username && password) {
     try {
       const query = await User.findOne({ username: username });

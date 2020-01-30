@@ -1,11 +1,11 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 const multer = require('multer');
 
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
-const { checkAdmin } = require('../middleware/jwt');
+const { checkAdmin, checkJWT } = require('../middleware/jwt');
 
 const {
   login,
@@ -18,6 +18,7 @@ router.get('/', checkAdmin, function(req, res) {
 });
 
 router.get('/checkUser', checkUser);
+router.get('/verify-token', checkJWT, (req, res) => res.end());
 router.post('/login', login);
 router.post('/register', register);
 
@@ -47,13 +48,12 @@ router.get('/review/:id', viewReview);
 router.delete('/review/:id', deleteReview);
 
 const {
-  indexGallery,
-  //remove,
-  uploadImage
+  //deletee
+  imageUpload
 } = require('../controllers/gallery-controller');
 
-router.get('/gallery', indexGallery);
+router.get('/gallery', () => {});
 //router.delete('/gallery/:id', remove);
-router.post('/upload', upload.single('file'), uploadImage);
+router.post('/upload', upload.single('image'), imageUpload);
 
 module.exports = router;

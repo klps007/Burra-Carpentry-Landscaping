@@ -42,29 +42,3 @@ exports.deleteReview = async (req, res) => {
     res.status(500).send(error.message);
   }
 };
-
-//exports.router.post('/review', (req, res) => {
-//   const { id, name, suburb, review } = req.body;
-//   newReview = Review.create({ id, name, suburb, review })
-//     .save()
-//     .then(newReview => {
-//       rert;
-//       res.json(newReview);
-//       res.send(response);
-//       res.redirect('/reviews');
-//     })
-//     .catch(err => res.json(err));
-//   console.log(err);
-// });
-
-// exports.router.delete('/reviews/:id', (req, res) => {
-//   const { id } = req.params;
-//   Reviews.findOneAndDelete({ id })
-//     .then(doc => {
-//       if (!doc) {
-//         return res.send(`No review found at id ${id}`);
-//       }
-//       res.send(`${doc.name} deleted from database`);
-//     })
-//     .catch(err => res.json(err));
-// });

@@ -1,35 +1,50 @@
 import React, { Component } from "react";
 import "../styles/GalleryPage.css";
-import gallery1 from "../images/gallery1.jpg";
-import gallery2 from "../images/gallery2.jpg";
-import gallery3 from "../images/gallery3.jpg";
-import gallery4 from "../images/gallery4.jpg";
-import Card from "react-bootstrap/Card";
-// import Button from "react-bootstrap/Button";
+// import gallery1 from '../images/gallery1.jpg';
+// import gallery2 from '../images/gallery2.jpg';
+// import gallery3 from '../images/gallery3.jpg';
+// import gallery4 from '../images/gallery4.jpg';
+import axios from "axios";
 
 export class GalleryCard extends Component {
-  render() {
-    return (
-      <div>
-        {/* <img className="gallery-images" src={gallery1} alt="work sample" />
-        <p>Description of the image</p>
-        <img className="gallery-images" src={gallery2} alt="work sample" />
-        <p>Description of the image</p>
-        <img className="gallery-images" src={gallery3} alt="work sample" />
-        <p>Description of the image</p>
-        <img className="gallery-images" src={gallery4} alt="work sample" />
-        <p>Description of the image</p> */}
+  // 1. make a request to the backend to get all the images stored in the gallery collection
+  state = {};
 
-        <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src={gallery4} />
-          <Card.Body>
-            <Card.Title>Before Picture</Card.Title>
-            <Card.Text>Description of the image</Card.Text>
-            {/* <Button variant="primary">Just a button</Button> */}
-          </Card.Body>
-        </Card>
-      </div>
-    );
+  async componentDidMount() {
+    const response = await axios.get("http://localhost:7070/gallery");
+    this.setState({
+      images: response.data
+    });
+  }
+
+  render() {
+    const { images } = this.state;
+    if (images) {
+      return (
+        <div>
+          {images.map((image, index) => {
+            return (
+              <div key={index}>
+                <img
+                  className="gallery-images"
+                  src={image.fileLink}
+                  alt="house"
+                />
+              </div>
+            );
+          })}
+        </div>
+      );
+    } else {
+      return (
+        <h1>
+          Loading images{" "}
+          <span role="img" aria-label="loading screen">
+            ✋
+          </span>
+        </h1>
+      );
+    }
   }
 }
 

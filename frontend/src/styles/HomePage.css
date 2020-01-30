@@ -1,3 +1,7 @@
-#heroimage {
+/* #heroimage {
   width: 900px;
+} */
+
+.homebutton {
+  background-color: blueviolet !important;
 }

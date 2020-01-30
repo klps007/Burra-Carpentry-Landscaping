@@ -1,17 +1,18 @@
 import React, { Component } from "react";
-import housepic from "../images/housepic.jpg";
 import "../styles/HomePage.css";
 import { Link } from "react-router-dom";
-
+import Button from "react-bootstrap/Button";
+import Jumbotron from "react-bootstrap/Jumbotron";
+import CarouselComponent from "./Carousel";
 export class HomePage extends Component {
   render() {
     return (
       <div>
-        <h1>Homepage</h1>
+        {/* <h1>Homepage</h1>
         <img id="heroimage" src={housepic} alt="a house" />
         <br></br>
         <Link to="/getquote">
-          <button>Get a quote</button>
+          <Button variant="primary">Get a quote</Button>
         </Link>
 
         <p>
@@ -37,7 +38,18 @@ export class HomePage extends Component {
           reprehenderit sapiente. Ad repudiandae facere natus labore dolore
           animi, unde ipsa corrupti eos officia, hic sint at quod tempore
           exercitationem?
-        </p>
+        </p> */}
+
+        <Jumbotron>
+          <h1>Burra Carpentry Landscaping</h1>
+          <p>We're here for all of your carpentry and landscaping needs.</p>
+          <CarouselComponent />
+          <Link to="/getquote">
+            <Button className="homebutton" variant="primary">
+              Get a quote
+            </Button>
+          </Link>
+        </Jumbotron>
       </div>
     );
   }

@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
   res.send('This is the landing page');
 });
 
-router.use('/quote', require('./quoteRoutes'));
+router.use('/getquote', require('./quoteRoutes'));
 router.use('/reviews', require('./reviewsRoutes'));
 router.use('/gallery', require('./galleryRoutes'));
 

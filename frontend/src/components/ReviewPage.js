@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import ReviewCard from './ReviewCard';
+import React, { Component } from "react";
+import ReviewCard from "./ReviewCard";
 
 export class ReviewPage extends Component {
   render() {
@@ -13,3 +13,4 @@ export class ReviewPage extends Component {
 }
 
 export default ReviewPage;
+// comment

@@ -8,7 +8,7 @@ import axios from 'axios';
 
 export class ReviewCard extends Component {
   // 1. make a request to the backend to get all the images stored in the gallery collection
-  state = {};
+  state = { reviews: [] };
 
   async componentDidMount() {
     const response = await axios.get('http://localhost:7070/reviews');
@@ -19,13 +19,19 @@ export class ReviewCard extends Component {
 
   render() {
     const { reviews } = this.state;
-    if (reviews) {
+    if (reviews.length > 0) {
       return (
         <div>
+          {console.log(reviews)}
           {reviews.map((review, index) => {
             return (
               <div key={index}>
-                <div review />
+                <div>
+                  {' '}
+                  <p>{review.name}</p>
+                  <p>{review.suburb}</p>
+                  <p>{review.review}</p>
+                </div>
               </div>
             );
           })}

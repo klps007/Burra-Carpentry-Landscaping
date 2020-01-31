@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"burradb.images"}],"uuid":"d69a66150535439db00af64fc277a09e"}

@@ -10,17 +10,8 @@ import Button from 'react-bootstrap/Button';
 export class NavbarComponent extends Component {
   render() {
     return (
-      <div>
-        {
-          <div className='navbar-links'>
-            <Link to='/'>Burra Carpentry Landscaping</Link>
-            <Link to='/gallery'>Gallery</Link>
-            <Link to='/reviews'>Reviews</Link>
-            <Link to='/getquote'>Get Quote</Link>
-            <h5>-----------------------------------------</h5>
-          </div>
-        }
-
+  
+<div>
         <Navbar bg='primary' variant='dark'>
           <Navbar.Brand href='/'>Burra Carpentry Landscaping</Navbar.Brand>
           <Nav className='mr-auto'>

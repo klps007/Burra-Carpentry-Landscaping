@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import GetQuoteForm from "./GetQuoteForm.js";
-import BootstrapForm from "./BootstrapForm";
+import React, { Component } from 'react';
+import GetQuoteForm from './GetQuoteForm.js';
+import BootstrapForm from './BootstrapForm';
 
 export class GetQuotePage extends Component {
   handleSubmit = data => {
@@ -9,7 +9,7 @@ export class GetQuotePage extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className='container'>
         <h3>Request a quote</h3>
         <br></br>
         {/* <GetQuoteForm onSubmit={this.handleSubmit} /> */}

@@ -3,5 +3,11 @@
 } */
 
 .homebutton {
-  background-color: blueviolet !important;
+  margin: 10px 0px;
+}
+
+.jumbotron-class {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

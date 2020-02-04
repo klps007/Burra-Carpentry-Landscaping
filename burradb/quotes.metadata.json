@@ -1,1 +1,0 @@
-{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"burradb.quotes"}],"uuid":"a296e68fae944b45a6e7d9f381eb729a"}

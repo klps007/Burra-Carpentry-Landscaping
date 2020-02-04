@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import { Field, reduxForm } from "redux-form";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import React, { Component } from 'react';
+import { Field, reduxForm } from 'redux-form';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
-import Multiselect from "react-widgets/lib/Multiselect";
-import "react-widgets/dist/css/react-widgets.css";
+import Multiselect from 'react-widgets/lib/Multiselect';
+import 'react-widgets/dist/css/react-widgets.css';
 
 class CustomInput extends React.Component {
   render() {
@@ -17,7 +17,7 @@ class CustomInput extends React.Component {
     } = this.props;
     return (
       <Form.Group as={Col}>
-        <Form.Label>{label}</Form.Label>
+		<Form.Label>{label}</Form.Label>
         <Form.Control
           defaultValue={value}
           type={type}
@@ -60,10 +60,10 @@ class CustomSelect extends React.Component {
       options
     } = this.props;
     return (
-      <Form.Group controlId="exampleForm.ControlSelect1">
+      <Form.Group controlId='exampleForm.ControlSelect1'>
         <Form.Label>{label}</Form.Label>
         <Form.Control
-          as="select"
+          as='select'
           defaultValue={value}
           onChange={event => {
             onChange(event.target.value);
@@ -86,22 +86,22 @@ class BootstrapForm extends React.Component {
           {...input}
           name={name}
           data={[
-            "Paving",
-            "Patio",
-            "Retaining Wall",
-            "Fencing",
-            "Decking",
-            "Pool Area",
-            "Water Feature",
-            "New Lawn",
-            "New Plants",
-            "Tree Removal",
-            "Rubbish Removal",
-            "In Home Carpentry",
-            "Walk in Robe"
+            'Paving',
+            'Patio',
+            'Retaining Wall',
+            'Fencing',
+            'Decking',
+            'Pool Area',
+            'Water Feature',
+            'New Lawn',
+            'New Plants',
+            'Tree Removal',
+            'Rubbish Removal',
+            'In Home Carpentry',
+            'Walk in Robe'
           ]}
           onBlur={this.props.onBlur}
-          value={input.value !== "[]" ? [...input.value] : "[]"}
+          value={input.value !== '[]' ? [...input.value] : '[]'}
         />
       </div>
     );
@@ -109,34 +109,35 @@ class BootstrapForm extends React.Component {
 
   render() {
     return (
-      <div className="col-md-8">
+      <div className='col-md-8'>
         <Form>
           <Form.Row>
             <Field
-              name="firstName"
+              name='firstName'
               component={CustomInput}
-              props={{ label: "First Name", type: "text" }}
+              props={{ label: 'First Name', type: 'text' }}
             />
             <Field
-              name="lastName"
+              name='lastName'
               component={CustomInput}
-              props={{ label: "Last Name", type: "text" }}
-            />
-          </Form.Row>
-          <Form.Row>
-            <Field
-              name="phone"
-              component={CustomInput}
-              props={{ label: "Phone Number", type: "text" }}
-            />
-            <Field
-              name="email"
-              component={CustomInput}
-              props={{ label: "Email", type: "email" }}
+              props={{ label: 'Last Name', type: 'text' }}
             />
           </Form.Row>
           <Form.Row>
             <Field
+              name='phone'
+              component={CustomInput}
+              props={{ label: 'Phone Number', type: 'text' }}
+            />
+            <Field
+              name='email'
+              component={CustomInput}
+              props={{ label: 'Email', type: 'email' }}
+            />
+          </Form.Row>
+          <Form.Row>
+            <Field
+<<<<<<< HEAD
               name="preferred"
               component={CustomSelect}
               props={{
@@ -148,81 +149,84 @@ class BootstrapForm extends React.Component {
           <Form.Row>
             <Field
               name="streetAddress"
+=======
+              name='streetAddress'
+>>>>>>> master
               component={CustomInput}
-              props={{ label: "Street Address", type: "text" }}
+              props={{ label: 'Street Address', type: 'text' }}
             />
             <Field
-              name="suburb"
+              name='suburb'
               component={CustomInput}
-              props={{ label: "Suburb", type: "text" }}
+              props={{ label: 'Suburb', type: 'text' }}
             />
             <Field
-              name="postcode"
+              name='postcode'
               component={CustomInput}
-              props={{ label: "Post Code", type: "text" }}
+              props={{ label: 'Post Code', type: 'text' }}
             />
           </Form.Row>
           <Field
-            name="commercialOrResidential"
+            name='commercialOrResidential'
             component={CustomSelect}
             props={{
-              label: "Is this a Commercial or Residential Property?",
-              options: ["Residential", "Commercial"]
+              label: 'Is this a Commercial or Residential Property?',
+              options: ['Residential', 'Commercial']
             }}
           />
           <Field
-            name="planningOnlyOrReadyNow"
+            name='planningOnlyOrReadyNow'
             component={CustomSelect}
             props={{
               label:
-                "Are you currently in the planing phase, or ready to get started?",
-              options: ["Ready to get started", "Currently just planning"]
+                'Are you currently in the planing phase, or ready to get started?',
+              options: ['Ready to get started', 'Currently just planning']
             }}
           />
           <Form.Row>
             <Field
-              name="approxStartDate"
+              name='approxStartDate'
               component={CustomInput}
               props={{
-                label: "What is your approximate start date?",
-                type: "date"
+                label: 'What is your approximate start date?',
+                type: 'date'
               }}
             />
           </Form.Row>
           <Form.Row>
             <Field
-              name="budget"
+              name='budget'
               component={CustomInput}
-              props={{ label: "Your Budget in $", type: "number" }}
+              props={{ label: 'Your Budget in $', type: 'number' }}
             />
 
             <Field
-              name="approxsizeSQM"
+              name='approxsizeSQM'
               component={CustomInput}
               props={{
-                label: "Approximate size in square meters",
-                type: "number"
+                label: 'Approximate size in square meters',
+                type: 'number'
               }}
             />
           </Form.Row>
 
           <Form.Row>
             <Field
-              name="needFinance"
+              name='needFinance'
               component={CustomCheckbox}
-              props={{ label: "I need finance", type: "checkbox" }}
+              props={{ label: 'I need finance', type: 'checkbox' }}
             />
           </Form.Row>
           <div>
             <label>Required Services</label>
-            <Field name="serviceRequired" component={this.renderMultiSelect} />
+            <Field name='serviceRequired' component={this.renderMultiSelect} />
           </div>
           <br></br>
           <Form.Row>
             <Field
-              name="additionalDetails"
+              name='additionalDetails'
               component={CustomInput}
-              props={{ label: "Additional Details", type: "textarea" }}
+              props={{ label: 'Additional Details', type: 'textarea' }}
             />
           </Form.Row>
           <Button onClick={this.props.handleSubmit}>Submit</Button>
@@ -233,10 +237,10 @@ class BootstrapForm extends React.Component {
 }
 
 BootstrapForm = reduxForm({
-  form: "getquoteform",
+  form: 'getquoteform',
   initialValues: {
-    commercialOrResidential: "residential",
-    planningOnlyOrReadyNow: "Planning",
+    commercialOrResidential: 'residential',
+    planningOnlyOrReadyNow: 'Planning',
     needFinance: false
   }
 })(BootstrapForm);

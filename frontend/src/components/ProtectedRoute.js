@@ -2,22 +2,6 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 
-// export const ProtectedRoute = ({ component: Component, ...rest }) =>(
-// (
-//   <Route
-//     {...rest}
-//     render={props =>
-//       localStorage.getItem('user') ? (
-//         <Component {...props} />
-//       ) : (
-// <Redirect
-//   to={{ pathname: '/login', state: { from: props.location } }}
-//         />
-//       )
-//     }
-//   />
-// );
-// export default ProtectedRoute;
 
 class ProtectedRoute extends React.Component {
   state = {
@@ -30,7 +14,7 @@ class ProtectedRoute extends React.Component {
       await axios.get('http://localhost:7070/admin/verify-token', {
         headers: {
           token:
-            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTMyMjBlYzAwZGExNzA0ZmE4OGI0NmUiLCJ1c2VybmFtZSI6ImtyaXN0eSIsImlhdCI6MTU4MDM0MzUzMn0.b2npwKgob57xg9p8KhuUVS-3BVmd8usJfdzoOPM0jMY'
+            localStorage.getItem('token')
         }
       });
       this.setState({
@@ -47,13 +31,12 @@ class ProtectedRoute extends React.Component {
 
   render() {
     const { loading, auth } = this.state;
-    console.log(this.props);
     if (loading) {
       return null;
     } else if (!auth) {
       return <Redirect to='/' />;
     } else {
-      const Component = this.props.component;
+	  const Component = this.props.component;
       return <Component />;
     }
   }

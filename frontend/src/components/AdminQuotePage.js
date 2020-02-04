@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-//import "../styles/ReviewCard2.css";
+import "../styles/ReviewCard2.css";
 import axios from "axios";
-//import ReviewCard2 from "./ReviewCard2"
+import AdminQuoteCard from "./AdminQuoteCard";
 
 
 export class AdminQuotesPage extends Component {
@@ -17,38 +17,21 @@ export class AdminQuotesPage extends Component {
 		quotes: response.data
 	  });
 	}
-
-  render() {
-    const { quotes } = this.state;
-    if (quotes.length > 0) {
-      return (
-        <div>
-          {console.log(quotes)}
-          {quotes.map((quote, index) => {
-            return (
-              <div key={index}>
-                <div>
-                  {' '}
-                  <p>{quote.name}</p>
-                  <p>{quote.contact}</p>
-                  <p>{quote.address}</p>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      );
-    } else {
-      return (
-        <h1>
-          Loading quotes{' '}
-          <span role='img' aria-label='loading screen'>
-            ✋
-          </span>
-        </h1>
-      );
-    }
-  }
+  
+	render() {
+	  if (this.state.quotes.length > 0) {
+		return (
+		  <div>
+			{this.state.quotes.map(quote => {
+			  return <AdminQuoteCard data={quote} />;
+			})}
+		  </div>
+		);
+	  } else {
+		return null;
+	  }
+	}
 }
 
-export default AdminQuotesPage;
+
+  export default AdminQuotesPage;

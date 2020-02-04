@@ -137,7 +137,6 @@ class BootstrapForm extends React.Component {
           </Form.Row>
           <Form.Row>
             <Field
-<<<<<<< HEAD
               name="preferred"
               component={CustomSelect}
               props={{
@@ -149,9 +148,6 @@ class BootstrapForm extends React.Component {
           <Form.Row>
             <Field
               name="streetAddress"
-=======
-              name='streetAddress'
->>>>>>> master
               component={CustomInput}
               props={{ label: 'Street Address', type: 'text' }}
             />

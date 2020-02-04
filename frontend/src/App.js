@@ -11,7 +11,7 @@ import RegisterPage from './components/RegisterPage';
 import AdminPage from './components/AdminPage';
 import AdminGalleryPage from './components/AdminGalleryPage';
 import AdminReviewsPage from './components/AdminReviewsPage';
-import AdminQuotePage from './components/AdminQuotePage';
+import AdminQuotesPage from './components/AdminQuotePage';
 import Footer from './components/Footer';
 import ProtectedRoute from './components/ProtectedRoute'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -29,7 +29,7 @@ const App = () => (
 			<ProtectedRoute exact path='/admin' component={AdminPage} />
 			<ProtectedRoute exact path='/admin/gallery' component={AdminGalleryPage} />
 			<ProtectedRoute exact path='/admin/reviews' component={AdminReviewsPage} />
-			<ProtectedRoute exact path='/admin/quote' component={AdminQuotePage} />
+			<ProtectedRoute exact path='/admin/quotes' component={AdminQuotesPage} />
 		</Switch>
     <Footer />
   </Router>

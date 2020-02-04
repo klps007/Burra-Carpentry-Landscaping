@@ -9,10 +9,13 @@ export class AdminPage extends Component {
         return (
                   <div>
         <h1>Admin Dashboard</h1>
-        { 
-        //   (this.state.user) ? 
+        {/* { 
       
-        }
+	  <Link href='/gallery'>Gallery</Link>
+	  <Link href='/reviews'>Reviews</Link>
+	  <Link href='/getquote'>Get Quote</Link>
+	   <Link href='/login'>Admin Login</Link>
+         */}
       </div>
         );
     }

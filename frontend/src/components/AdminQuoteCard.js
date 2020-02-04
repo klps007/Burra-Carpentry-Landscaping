@@ -5,8 +5,9 @@ import Card from "react-bootstrap/Card";
 export class AdminQuoteCard extends Component {
   render() {
     const { firstname, lastname, phone, email, streetAddress, suburb, postcode, needFinance, commercialOrResidential, planningOnlyOrReadyNow, serviceRequired, approxStartDate, budget, approxsizeSQM, additionalDetails } = this.props.data;
-
+console.log(serviceRequired)
     return (
+	
       <div className="quote-body">
         <Card className="a-quote-card" style={{ width: "50rem" }}>
           <Card.Body>
@@ -31,52 +32,55 @@ export class AdminQuoteCard extends Component {
 			  <h5>{budget}</h5>
 			  <h5>{approxStartDate}</h5>
             </Card.Text>
-			  <div>{serviceRequired.map(service =>
+			  <h5>{serviceRequired.map( (service, index) =>
 				{ return(
-					<div>
+					<div key={index}>
+						<p>{service}</p>
+					
+					{/*}
 						<p>Service Required {service.serviceRequired}</p>
 						
-						{(service.paving === true) ?
+						{(service.paving == true) ?
 						<p>Is paving {service.paving}</p> : <p></p>}
 
-						{(service.rubbishRemoval === true) ?
+						{(service.rubbishRemoval == true) ?
 						<p>Is Rubbish Removal {service.rubbishRemoval}</p> : <p></p>}
 						
-						{(service.newPlants === true) ?
+						{(service.newPlants == true) ?
 						<p>Is New Plants {service.newPlants}</p> : <p></p>}
 						
-						{(service.newLawn === true) ?
+						{(service.newLawn == true) ?
 						<p>Is New Lawn {service.newLawn}</p> : <p></p>}
 						
-						{(service.waterFeature === true) ? 
+						{(service.waterFeature == true) ? 
 						<p>Is Water Feature {service.waterFeature}</p> : <p></p>}
 
-						{(service.fencing === true) ?
+						{(service.fencing == true) ?
 						<p>Is Fencing {service.fencing}</p> : <p></p>}
 
-					{(service.decking === true) ?
+						{(service.decking == true) ?
 						<p>Is Decking {service.decking}</p> : <p></p>}
 
-						{(service.poolArea === true) ?
+						{(service.poolArea == true) ?
 						<p>Is Pool Area {service.poolArea}</p> : <p></p>}
 
-						{(service.retainingWall === true) ?
+						{(service.retainingWall == true) ?
 						<p>Is Retaining Wall {service.retainingWall}</p> : <p></p>}
 						
-						{(service.walkInRobe === true) ?
+						{(service.walkInRobe == true) ?
 						<p>Is Walk in Robe {service.walkInRobe}</p> : <p></p>}
 
-						{(service.inHomeCarpentry === true) ?
+						{(service.inHomeCarpentry == true) ?
 						<p>Is In Home Carpentry {service.inHomeCarpentry}</p> : <p></p>}
 
-						{(service.patio === true) ?
+						{(service.patio == true) ?
 						<p>Is Patio {service.patio}</p> : <p></p>}
 
-						{(service.treeRemoval === true) ?
+						{(service.treeRemoval == true) ?
 						<p>Is Tree Removal {service.treeRemoval}</p> : <p></p>}	
-
+						*/}
 					</div>
-			  		)})}</div>
+			  		)})}</h5>
 			   <Card.Text>
 			   <h5>{additionalDetails}</h5>
 			   </Card.Text>

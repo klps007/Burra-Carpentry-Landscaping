@@ -10,9 +10,7 @@ export class AdminQuotesPage extends Component {
 	};
   
 	async componentDidMount() {
-		console.log("bye")
 	  const response = await axios.get("http://localhost:7070/admin/quotes");
-	  console.log("hi", response.data)
 	  this.setState({
 		quotes: response.data
 	  });
@@ -22,8 +20,8 @@ export class AdminQuotesPage extends Component {
 	  if (this.state.quotes.length > 0) {
 		return (
 		  <div>
-			{this.state.quotes.map(quote => {
-			  return <AdminQuoteCard data={quote} />;
+			{this.state.quotes.map( (quote, index) => {
+			  return <AdminQuoteCard key={index} data={quote} />;
 			})}
 		  </div>
 		);

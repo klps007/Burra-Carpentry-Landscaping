@@ -113,27 +113,6 @@ class GetQuoteForm extends React.Component {
         <div>
           <label>Required Services</label>
           <Field name="serviceRequired" component={this.renderMultiSelect} />
-          {/* <Field
-            name="serviceRequired"
-            component={Multiselect}
-            defaultValue={[]}
-            onBlur={() => this.props.onBlur()}
-            data={[
-              "Paving",
-              "Patio",
-              "Retaining Wall",
-              "Fencing",
-              "Decking",
-              "Pool Area",
-              "Water Feature",
-              "New Lawn",
-              "New Plants",
-              "Tree Removal",
-              "Rubbish Removal",
-              "In Home Carpentry",
-              "Walk in Robe"
-            ]}
-          /> */}
         </div>
 
         <div>

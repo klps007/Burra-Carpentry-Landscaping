@@ -137,7 +137,21 @@ class BootstrapForm extends React.Component {
           </Form.Row>
           <Form.Row>
             <Field
+<<<<<<< HEAD
+              name="preferred"
+              component={CustomSelect}
+              props={{
+                label: "How would you prefer to be contacted?",
+                options: ["  ", "email", "phone"]
+              }}
+            />
+          </Form.Row>
+          <Form.Row>
+            <Field
+              name="streetAddress"
+=======
               name='streetAddress'
+>>>>>>> master
               component={CustomInput}
               props={{ label: 'Street Address', type: 'text' }}
             />
@@ -202,11 +216,6 @@ class BootstrapForm extends React.Component {
               component={CustomCheckbox}
               props={{ label: 'I need finance', type: 'checkbox' }}
             />
-
-            {/* <div>
-              <label htmlFor="needFinance">I need finance</label>
-              <Field name="needFinance" component="input" type="checkbox" />
-            </div> */}
           </Form.Row>
           <div>
             <label>Required Services</label>

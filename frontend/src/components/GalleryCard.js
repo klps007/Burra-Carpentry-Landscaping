@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../styles/GalleryPage.css";
-import axios from "axios";
+// import axios from "axios";
 import Card from "react-bootstrap/Card";
 
 export class GalleryCard extends Component {

@@ -3,22 +3,24 @@
 import React from "react";
 import "react-widgets/dist/css/react-widgets.css";
 import axios from 'axios'
+import { Redirect } from "react-router-dom";
 
-class LoginForm extends React.Component {
+export class LoginForm extends React.Component {
 
   // Using a class based component here because we're accessing DOM refs
 
 handleSubmit = async (e) => {
-try{ 
-    e.preventDefault();
-	await axios.post("http://localhost:7070/admin/login", this.state)
-    let username = this.label.username.value;
-    let password = this.label.password.value;
-    this.props.onSubmit(username, password);
-	} catch(err) {
-			console.log(err)
-	}
+	try{ 
+		e.preventDefault();
+		const response = await axios.post("http://localhost:7070/admin/login", this.state)
+		const token = response.data.token
+		localStorage.setItem('token', token)
+		this.props.history.push("/admin")
+  	} catch(err) {
+		console.log(err.message)
   }
+}
+ 
 handleInputChange = (e) => {
 		this.setState({[e.target.name]: e.target.value})
 	}

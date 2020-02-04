@@ -18,6 +18,7 @@ export class NavbarComponent extends Component {
             <Nav.Link href='/gallery'>Gallery</Nav.Link>
             <Nav.Link href='/reviews'>Reviews</Nav.Link>
             <Nav.Link href='/getquote'>Get Quote</Nav.Link>
+			 <Nav.Link href='/login'>Admin Login</Nav.Link>
           </Nav>
         </Navbar>
       </div>

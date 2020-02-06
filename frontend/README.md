@@ -4,6 +4,31 @@
 
 [https://github.com/klps007/Burra-Carpentry-Landscaping](https://github.com/klps007/Burra-Carpentry-Landscaping)
 
+## PRG1006-7.1 Usability Testing
+
+We conducted a usability test with one participant who shall be referred to as the ‘user’. The user was first instructed to take a look at the home page and then tell us what they thought the website was about. The user was able to correctly identify that it was some kind of a landscaping business.
+
+[Please click here to watch the screen recording of the user test](https://drive.google.com/open?id=1y5xVXNfc61Zzm-cN5EvR2cShYAQHjkIe)
+
+Overall the user was pleased with the look and feel of the website as well as the usability. The user was easily able to figure out that in order to ‘find the prices’ they’d have to fill out the ‘get a quote’ form. The user was also able to identify that the gallery would contain images of previous work and that reviews would give them an insight into the reviews left by other customers.
+
+Here are some of the usability issues that the user came across.
+The user:
+was a bit confused about the large images on the home page at first.
+
+wondered why the admin login was visible. However the user didn’t mind that it is visible
+
+was missing an email address in the footer section of the website. (The client prefers that the email is not displayed there but that potential customers use the ‘get quote’ form instead.
+
+wanted to see a rough estimate for a price without having to request a quote. ( Again this is something that the client does not want to provide as it depends on so many different factors.)
+
+noted that the review page didn’t state that it’s customer reviews, but figured they might be.
+
+In the next iteration of the webapp, we would be addressing these usability issues in the following way:
+Mention that the reviews are previous customer reviews.
+Hide the admin login. It’s currently only there to make matters easier for those marking the webapp.
+Do additional user testing to determine whether the size of the images on the homepage should be decreased.
+
 ## CMP1043-4.2 Dataflow Diagram
 
 ![Dataflow Diagram](./readme-images/Dataflow.jpeg)

@@ -4,6 +4,12 @@
 
 [https://github.com/klps007/Burra-Carpentry-Landscaping](https://github.com/klps007/Burra-Carpentry-Landscaping)
 
+## Deployed Links
+
+[Heroku](https://burra-carpentry-landscaping.herokuapp.com/)
+
+[Netlify](https://burra.netlify.com/)
+
 ## How to run the webapp locally:
 
 cd into the frontend directory and run
@@ -18,7 +24,24 @@ cd into the backend directory and run
 npm start
 ```
 
-## PRG1006-7.1 Usability Testing
+## Login Credentials
+
+In order to log into the admin area use these credentials
+
+```
+username: harrison
+password: password
+```
+
+## PRG1006-7.1 & PRG1006-7.2 (Production and Development Testing)
+
+### Manual Testing
+
+We created a number of manual tests. Please click on the link below to view the spreadsheet with all the manual tests.
+
+[Click here to get to the spreadsheet with all the manual test](https://docs.google.com/spreadsheets/d/1kBU7V0-GyVihzrNQEemNV51T6tdd0fyaT3xR4sCinUY/edit?usp=sharing)
+
+### Usability Testing
 
 We conducted a usability test with one participant who shall be referred to as the ‘user’. The user was first instructed to take a look at the home page and then tell us what they thought the website was about. The user was able to correctly identify that it was some kind of a landscaping business.
 
@@ -161,6 +184,8 @@ Below you can see the basic wireframes with comments.
 ---
 
 ## CMP1043-5.2 Trello
+
+[https://trello.com/b/7EXx1a8d/burra-carpentry-landscaping](https://trello.com/b/7EXx1a8d/burra-carpentry-landscaping)
 
 Trello was used to allocate and track tasks, it includes sections for to do, doing and done and organizes tasks under each.
 

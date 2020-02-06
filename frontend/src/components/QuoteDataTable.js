@@ -56,7 +56,7 @@ export default class QuoteDataTable extends Component {
                 <td>{item.streetAddress}</td>
                 <td>{item.suburb}</td>
                 <td>{item.postcode}</td>
-                <td>{item.needFinance}</td>
+                {item.needFinance ? <td>true</td> : <td>false</td>}
                 <td>{item.commercialOrResidential}</td>
                 <td>{item.planningOnlyOrReadyNow}</td>
                 <td>{item.approxsizeSQM}</td>

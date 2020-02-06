@@ -3,10 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "node app.js",
     "test": "jest",
-    "test:watch": "jest --watch"
+	"test:watch": "jest --watch",
+	"dev": "nodemon app.js"
   },
+  "lint": "eslint . --ext .js; exit 0",
   "dependencies": {
     "aws-sdk": "^2.610.0",
     "bcrypt": "^3.0.7",

@@ -9,12 +9,21 @@ import GetQuotePage from './components/GetQuotePage';
 import LoginPage from './components/LoginPage';
 import RegisterPage from './components/RegisterPage';
 import AdminPage from './components/AdminPage';
-import AdminGalleryPage from './components/AdminGalleryPage';
-import AdminReviewsPage from './components/AdminReviewsPage';
-import AdminQuotesPage from './components/AdminQuotePage';
 import Footer from './components/Footer';
 import ProtectedRoute from './components/ProtectedRoute'
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+// class App extends React.Component {
+//   async componentDidMount() {
+//     const response = await fetch(`${process.env.REACT_APP_API_URL}/hello`)
+//     const data = await response.json()
+//     console.log(data)
+//   }
+
+// ,netlfy   
+// {
+// 	"siteId": "85a10751-abd7-48dd-908b-9ea65f241745"
+// }
 
 const App = () => (
   <Router>
@@ -27,9 +36,6 @@ const App = () => (
 			<Route exact path='/register' component={RegisterPage} />
 			<Route exact path='/login' component={LoginPage} />
 			<ProtectedRoute exact path='/admin' component={AdminPage} />
-			<ProtectedRoute exact path='/admin/gallery' component={AdminGalleryPage} />
-			<ProtectedRoute exact path='/admin/reviews' component={AdminReviewsPage} />
-			<ProtectedRoute exact path='/admin/quotes' component={AdminQuotesPage} />
 		</Switch>
     <Footer />
   </Router>

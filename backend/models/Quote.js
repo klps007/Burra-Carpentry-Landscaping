@@ -1,8 +1,13 @@
 const mongoose = require("mongoose");
+const AutoIncrement = require('mongoose-sequence')(mongoose);
 
-let quoteSchema = new mongoose.Schema(
+
+let QuoteSchema = new mongoose.Schema(
   {
-    createdTime: { type: Date, default: Date.now },
+	createdTime: { type: Date, default: Date.now },
+	id: { 
+		type: Number
+	},
 
     firstName: {
       type: String,
@@ -27,55 +32,20 @@ let quoteSchema = new mongoose.Schema(
     postcode: String,
     commercialOrResidential: String,
     planningOnlyOrReadyNow: String,
-    approxStartDate: Date,
+    approxStartDate: String,
     budget: Number,
     needFinance: Boolean,
 	approxsizeSQM: Number,
 	additionalDetails: String,
     serviceRequired: []
-    // [
-    //   {
-    //     paving: String,
-    //     patio: String,
-    //     retainingWall: String,
-    //     fencing: String,
-    //     decking: String,
-    //     poolArea: String,
-    //     waterFeature: String,
-    //     newLawn: String,
-    //     newPlants: String,
-    //     treeRemoval: String,
-    //     rubbishRemoval: String,
-    //     inHomeCarpentry: String,
-    //     walkInRobe: String,
-    //     additionalDetails: String
-    //   }
-    // ]
-  },
-  { collection: "quotes" }
-);
-
-const Quote = mongoose.model("Quote", quoteSchema);
-module.exports = Quote;
-
+	
+	});
   
 
+ 
+  
+  { collection: "quotes" }
 
-  // [
-  //   {
-  //     paving: String,
-  //     patio: String,
-  //     retainingWall: String,
-  //     fencing: String,
-  //     decking: String,
-  //     poolArea: String,
-  //     waterFeature: String,
-  //     newLawn: String,
-  //     newPlants: String,
-  //     treeRemoval: String,
-  //     rubbishRemoval: String,
-  //     inHomeCarpentry: String,
-  //     walkInRobe: String,
-  //     additionalDetails: String
-  //   }
-  // ]
+QuoteSchema.plugin(AutoIncrement, {id:'order_seq',inc_field: 'id'});
+const Quote = mongoose.model("Quote", QuoteSchema);
+module.exports = Quote;

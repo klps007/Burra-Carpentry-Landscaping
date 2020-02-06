@@ -8,7 +8,7 @@ import Button from "react-bootstrap/Button";
 export class LoginForm extends React.Component {
   // Using a class based component here because we're accessing DOM refs
 
-  handleSubmit = async e => {
+ handleSubmit = async e => {
     console.log("testing");
     try {
       e.preventDefault();

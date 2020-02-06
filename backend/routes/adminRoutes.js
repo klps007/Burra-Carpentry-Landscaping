@@ -34,7 +34,7 @@ const {
 router.get('/quotes', indexQuote);
 router.get('/quote/:id', viewQuote);
 router.put('/quote/:id', updateQuote);
-router.delete('quote/:id', deleteQuote);
+router.delete('/quote/:id', deleteQuote);
 
 // CRUD for Reviews
 const {

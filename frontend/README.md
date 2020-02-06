@@ -4,6 +4,20 @@
 
 [https://github.com/klps007/Burra-Carpentry-Landscaping](https://github.com/klps007/Burra-Carpentry-Landscaping)
 
+## How to run the webapp locally:
+
+cd into the frontend directory and run
+
+```
+yarn start
+```
+
+cd into the backend directory and run
+
+```
+npm start
+```
+
 ## PRG1006-7.1 Usability Testing
 
 We conducted a usability test with one participant who shall be referred to as the ‘user’. The user was first instructed to take a look at the home page and then tell us what they thought the website was about. The user was able to correctly identify that it was some kind of a landscaping business.
@@ -28,6 +42,26 @@ In the next iteration of the webapp, we would be addressing these usability issu
 Mention that the reviews are previous customer reviews.
 Hide the admin login. It’s currently only there to make matters easier for those marking the webapp.
 Do additional user testing to determine whether the size of the images on the homepage should be decreased.
+
+## CMP1043-1.3 Libraries Used
+
+Redux-form:
+We used this in order to create our ‘get quote’ form. Redux form allows us to control the state of the form.
+
+React:
+This is the Javascript Library that we used in order to build our frontend components. Multiple components were rendered on a page in order to create the website. So for instance each page contained a navbar component, a footer component and several components in between.
+
+React-Bootstrap / Bootstrap:
+We used bootstrap in order to style our react components. It allowed us to give the website a uniform design.
+
+React-Widgets:
+We used the react widgets in order to create the ‘required services’ dropdown in the form. It allows users to select multiple things from the dropdown.
+
+Axios:
+We used axios in order to make calls to the backend to get the correct data displayed on the front end.
+
+Testing-library:
+We used cypress to test the functionality of our website and see whether things were working as intended.
 
 ## CMP1043-4.2 Dataflow Diagram
 

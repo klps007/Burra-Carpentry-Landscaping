@@ -1,18 +1,17 @@
+describe("Testing login", function() {
+  it("Goes to the login page, fills in the username and password and then clicks on the login button", function() {
+    const username = "harrison";
+    const password = "password";
+    cy.visit("http://localhost:3000/login");
+    cy.get(`[href="/login"]`).click();
 
-
-describe("My First Test", function() {
-  it(‘Admin login form accepts input and should not display admin dashboard on incorrect credentials’, () => {
-    const name = “Incorrect Username”;
-    const password = “incorrect password”;
-    cy.get(‘input[name=username]’)
-      .type(name)
-      .should(‘have.value’, name)
-    cy.wait(2000)
-    cy.get(‘input[name=password]’)
+    cy.get("#formBasicUserName")
+      .type(username)
+      .should("have.value", username);
+    cy.get("#formBasicPassword")
       .type(password)
-      .should(‘have.value’, password)
-    cy.wait(2000)
-    cy.get(‘button’).contains(‘Login’).click();
-    cy.wait(3000)
-  })
+      .should("have.value", password);
+
+    cy.get(".btn").click();
+  });
 });

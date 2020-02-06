@@ -66,6 +66,12 @@ Mention that the reviews are previous customer reviews.
 Hide the admin login. It’s currently only there to make matters easier for those marking the webapp.
 Do additional user testing to determine whether the size of the images on the homepage should be decreased.
 
+## PRG1006-7.3 Automated test
+
+We used cypress for automated testing. You can find all the files in the frontend/cypress/integration directory.
+
+![Cypress Tests](./readme-images/cypress.png)
+
 ## CMP1043-1.3 Libraries Used
 
 Redux-form:

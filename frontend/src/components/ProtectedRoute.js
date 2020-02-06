@@ -1,7 +1,6 @@
-import React from 'react';
-import { Redirect } from 'react-router-dom';
-import axios from 'axios';
-
+import React from "react";
+import { Redirect } from "react-router-dom";
+import axios from "axios";
 
 class ProtectedRoute extends React.Component {
   state = {
@@ -11,12 +10,14 @@ class ProtectedRoute extends React.Component {
 
   async componentDidMount() {
     try {
-      await axios.get('http://localhost:7070/admin/verify-token', {
-        headers: {
-          token:
-            localStorage.getItem('token')
+      await axios.get(
+        process.env.REACT_APP_BACKEND_URL + "/admin/verify-token",
+        {
+          headers: {
+            token: localStorage.getItem("token")
+          }
         }
-      });
+      );
       this.setState({
         auth: true,
         loading: false
@@ -34,9 +35,9 @@ class ProtectedRoute extends React.Component {
     if (loading) {
       return null;
     } else if (!auth) {
-      return <Redirect to='/' />;
+      return <Redirect to="/" />;
     } else {
-	  const Component = this.props.component;
+      const Component = this.props.component;
       return <Component />;
     }
   }

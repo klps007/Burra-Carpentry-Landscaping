@@ -8,12 +8,12 @@ import Button from "react-bootstrap/Button";
 export class LoginForm extends React.Component {
   // Using a class based component here because we're accessing DOM refs
 
- handleSubmit = async e => {
+  handleSubmit = async e => {
     console.log("testing");
     try {
       e.preventDefault();
       const response = await axios.post(
-        "http://localhost:7070/admin/login",
+        process.env.REACT_APP_BACKEND_URL + "/admin/login",
         this.state
       );
       const token = response.data.token;

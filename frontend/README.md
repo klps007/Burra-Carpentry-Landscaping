@@ -1,68 +1,116 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Burra-Carpentry-Landscaping
 
-## Available Scripts
+## Github Link:
 
-In the project directory, you can run:
+[https://github.com/klps007/Burra-Carpentry-Landscaping](https://github.com/klps007/Burra-Carpentry-Landscaping)
 
-### `yarn start`
+## CMP1043-4.2 Dataflow Diagram
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![Dataflow Diagram](./readme-images/Dataflow.jpeg)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## CMP1043-4.3 Application Architecture Diagram
 
-### `yarn test`
+![Architectuire Diagram](./readme-images/Architecture.jpeg)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## CMP1043-5.1 User Stories and Personas
 
-### `yarn build`
+### Persona 1 - Jenny
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Jenny, 29, Footscray](./readme-images/jenny.jpg)
+Jenny, 29, Footscray
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Jenny worked hard ever since she left university to save up enough money for a downpayment on a house. Last September she finally bought the house of her dreams in West Footscray. The property is a bit older than the other ones in the neighbourhood, but she figured that with a bit of extra work on the weekends she could fix it up in no time. However due to Jennys busy work schedule and social obligations she hasn’t gotten around to fixing up the front yard. Last year Jenny got a lot more money back from her tax returns than she expected and because she just moved into her own home, her friends and family gave her cash instead of presents for Christmas. Jenny would like to use some of that extra money that she got and pay someone to fix her front yard for her.
+Jenny works very long hours in an office in the CBD of Melbourne. It’s an open plan office, so it’s difficult for her to talk on the phone during the day. She prefers to take care of things via text or email. She is somewhat patient, but does expect to get a swift answer any time she contacts customer support or a business for an inquiry.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Persona 2 - Anahil
 
-### `yarn eject`
+![Anahil, 66, Richmond](./readme-images/anahil.jpg)
+Anahil, 66, Richmond
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+This is Anahil. She worked as a Professor of Molecular Biology at the University of Melbourne.
+Her children all moved out many years ago and her partner passed away recently.
+Last year she retired and decided that it’s time to remodel her two-bedroom house in Richmond. She also wants to remodel the outdoor spaces of her home. She enjoys gardening and growing her own vegetables. She’s also always experimenting with creating new strains of rice that need less water than the conventional types.
+She used a computer when she worked at the University, but outside of work she prefers to get her news from a print newspaper, reads physical books and goes to classical music concerts. She occasionally uses her laptop to print out the latest journal articles in the field of Molecular Biology, and to do some research. She has a cell phone but only uses it for a few minutes a day, to keep in touch with her two children via WhatsApp.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### User Stories
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Jenny
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Wants to be able to get to the website and request a quote without any hassle.
+- Wants to get contacted back via email or text and not phone.
+- Expects to get some sort of feedback when she fills out a form online to know that it actually did go through.
+- Usually accesses websites from her phone, doesn’t have patience for websites that are not mobile friendly.
+- Wants to see some examples of what the business can do without having to read too much text.
 
-## Learn More
+Anahil
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Wants to be able to go to the website of a landscaping business that is not too overloaded with information, because a website that is heavily convoluted is difficult for her to navigate.
+- Wants to be able to quickly find the phone number of the business so she can call them.
+- Wants to see what type of landscapings they have done in the past. Ideally she wants to see some before and after pictures so she can assess what the skill level of the landscaper is.
+- Wants to read what previous customers had to say about the business.
+- Needs the website to have large enough fonts so that she can read what it says.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## CMP1043-4.1 & CMP1043-5.3 Wireframes and documentation
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### Design process
 
-### Analyzing the Bundle Size
+We started out making lo fidelity paper prototypes like the one you can see below:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+![initial version of the homepage](./readme-images/paper.JPG)
 
-### Making a Progressive Web App
+From there we started sketching things out on figma. You can see the wireframes in the next few sections below.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Eventually we created clickable prototypes, which you can in the last part of this section.
 
-### Advanced Configuration
+### Wireframes with comments
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+Below you can see the basic wireframes with comments.
+![Homepage with comments](./readme-images/homepage.png)
 
-### Deployment
+![Gallery with comments](./readme-images/gallery.png)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+![Reviews with comments](./readme-images/reviews.png)
 
-### `yarn build` fails to minify
+![Contact with comments](./readme-images/contact1.png)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+![Contact with comments](./readme-images/contact2.png)
+
+### Wireframes
+
+- Desktop
+
+![Overview of the movile wireframes](./readme-images/desktop_overview.png)
+
+[You can click here and view all the wireframes in detail on Figma](https://www.figma.com/file/619pg5Zna8cx6KPh7N3MrW/Burra-Carpentry-and-Landscaping?node-id=0%3A1)
+
+- Mobile
+
+![Overview of the movile wireframes](./readme-images/mobile_overview.png)
+
+[You can click here and view all the wireframes in detail on Figma](https://www.figma.com/file/619pg5Zna8cx6KPh7N3MrW/Burra-Carpentry-and-Landscaping?node-id=0%3A1)
+
+### Mobile Clickable Prototype:
+
+[Click here to view the Mobile Prototype](https://www.figma.com/proto/619pg5Zna8cx6KPh7N3MrW/Burra-Carpentry-and-Landscaping?node-id=100%3A253&scaling=contain)
+
+### Desktop Clickable Prototype:
+
+[Click here to view the Desktop Prototype](https://www.figma.com/proto/619pg5Zna8cx6KPh7N3MrW/Burra-Carpentry-and-Landscaping?node-id=95%3A252&scaling=contain)
+
+---
+
+## CMP1043-5.2 Trello
+
+Trello was used to allocate and track tasks, it includes sections for to do, doing and done and organizes tasks under each.
+
+The task is assigned to them team member and the trello card moves from "To Do" to "Doing" and then "Done" column on completion.
+
+This system made it easy for everyone to know what the everyone else was working on reducing conflict with pulling and pushing to github.
+
+This results in agile methodology being implemented through out our project.
+
+![Trello ](./readme-images/Trello1.png)
+![Trello ](./readme-images/Trello2.png)
+![Trello ](./readme-images/Trello3.png)

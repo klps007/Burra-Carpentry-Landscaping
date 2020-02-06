@@ -36,7 +36,7 @@ exports.updateQuote = async (req, res) => {
   try {
     const { id } = req.params;
     const data = req.body;
-    const updatedQuote = await Quote.findByIdAndUpdate(id, data, { new: true });
+    const updatedQuote = await Quote.findOneAndUpdate({id}, data, { new: true });
     res.status(202).send(updatedQuote);
   } catch (error) {
     console.log(error.stack);
@@ -44,10 +44,11 @@ exports.updateQuote = async (req, res) => {
   }
 };
 
+
 exports.deleteQuote = async (req, res) => {
   try {
     const { id } = req.params;
-    const deletedQuote = await Quote.findByIdAndDelete(id);
+    const deletedQuote = await Quote.deleteOne({ id} );
     res.status(202).send(deletedQuote);
   } catch (error) {
     console.log(error.stack);

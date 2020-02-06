@@ -20,7 +20,7 @@ handleSubmit = async (e) => {
 		console.log(err.message)
   }
 }
- 
+ X
 handleInputChange = (e) => {
 		this.setState({[e.target.name]: e.target.value})
 	}

@@ -14,25 +14,23 @@ export class CarouselComponent extends Component {
             <img className="d-block w-100" src={home1} alt="First slide" />
             <Carousel.Caption>
               <h3>We can build anything that your backyard needs.</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <p>Just use the 'get quote' form to contact us.</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
             <img className="d-block w-100" src={home2} alt="Third slide" />
 
             <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h3>We do anything from tree removal to fencing.</h3>
+              <p>Contact us today to find out how we can help you.</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
             <img className="d-block w-100" src={home3} alt="Third slide" />
 
             <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-              </p>
+              <h3>We also offer in home carpentry services</h3>
+              <p>Feel free to contact us to get a quote.</p>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>

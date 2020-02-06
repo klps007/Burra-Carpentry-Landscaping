@@ -9,7 +9,9 @@ export class ReviewPage extends Component {
   };
 
   async componentDidMount() {
-    const response = await axios.get("http://localhost:7070/reviews");
+    const response = await axios.get(
+      process.env.REACT_APP_BACKEND_URL + "/reviews"
+    );
     this.setState({
       reviews: response.data
     });

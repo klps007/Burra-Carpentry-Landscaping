@@ -8,7 +8,9 @@ export class GalleryPage extends Component {
   };
 
   async componentDidMount() {
-    const response = await axios.get("http://localhost:7070/gallery");
+    const response = await axios.get(
+      process.env.REACT_APP_BACKEND_URL + "/gallery"
+    );
     console.log(response.data);
 
     this.setState({

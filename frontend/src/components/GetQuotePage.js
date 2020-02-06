@@ -8,7 +8,10 @@ export class GetQuotePage extends Component {
   state = { submitMessage: false };
 
   handleSubmit = async data => {
-    const response = await axios.post("http://localhost:7070/getquote", data);
+    const response = await axios.post(
+      process.env.REACT_APP_BACKEND_URL + "/getquote",
+      data
+    );
     console.log(response);
     this.setState({
       submitMessage: true

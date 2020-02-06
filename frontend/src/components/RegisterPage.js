@@ -1,26 +1,28 @@
 import React from "react";
 import "react-widgets/dist/css/react-widgets.css";
-import axios from 'axios'
+import axios from "axios";
 
 class RegisterForm extends React.Component {
-	state = {}
-	
-	handleSubmit = async (e) => {
-		try {
-			e.preventDefault()
-			const response = await axios.post("http://localhost:7070/admin/register", this.state)
-			const token = response.data.token
-			localStorage.setItem('token', token)
-			this.props.history.push("/admin")
-		} catch(err) {
-			console.log(err)
-		}
-	}
+  state = {};
 
-	handleInputChange = (e) => {
-		this.setState({[e.target.name]: e.target.value})
-	}
+  handleSubmit = async e => {
+    try {
+      e.preventDefault();
+      const response = await axios.post(
+        process.env.REACT_APP_BACKEND_URL + "/admin/register",
+        this.state
+      );
+      const token = response.data.token;
+      localStorage.setItem("token", token);
+      this.props.history.push("/admin");
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
+  handleInputChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
 
   render() {
     return (
@@ -28,7 +30,11 @@ class RegisterForm extends React.Component {
         <h3>User Name</h3>
         <div>
           <label htmlFor="username">User Name</label>
-          <input name="username" type="text" onChange={this.handleInputChange} />
+          <input
+            name="username"
+            type="text"
+            onChange={this.handleInputChange}
+          />
         </div>
         <h3>Email</h3>
         <div>
@@ -38,13 +44,16 @@ class RegisterForm extends React.Component {
         <h3>Password</h3>
         <div>
           <label htmlFor="password">Password</label>
-          <input name="password" type="password" onChange={this.handleInputChange} />
+          <input
+            name="password"
+            type="password"
+            onChange={this.handleInputChange}
+          />
         </div>
         <button type="submit">Submit</button>
       </form>
     );
   }
 }
-
 
 export default RegisterForm;

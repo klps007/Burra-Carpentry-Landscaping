@@ -30,7 +30,8 @@ let quoteSchema = new mongoose.Schema(
     approxStartDate: Date,
     budget: Number,
     needFinance: Boolean,
-    approxsizeSQM: Number,
+	approxsizeSQM: Number,
+	additionalDetails: String,
     serviceRequired: []
     // [
     //   {
@@ -56,3 +57,25 @@ let quoteSchema = new mongoose.Schema(
 
 const Quote = mongoose.model("Quote", quoteSchema);
 module.exports = Quote;
+
+  
+
+
+  // [
+  //   {
+  //     paving: String,
+  //     patio: String,
+  //     retainingWall: String,
+  //     fencing: String,
+  //     decking: String,
+  //     poolArea: String,
+  //     waterFeature: String,
+  //     newLawn: String,
+  //     newPlants: String,
+  //     treeRemoval: String,
+  //     rubbishRemoval: String,
+  //     inHomeCarpentry: String,
+  //     walkInRobe: String,
+  //     additionalDetails: String
+  //   }
+  // ]
